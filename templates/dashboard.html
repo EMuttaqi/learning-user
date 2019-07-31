@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content_block %}
+
+  <h1>Your Personal details:</h1>
+  <h3>Username: {{ user.username }}<h3>
+  <h3>Full Name:{{ user.first_name }} {{ user.last_name}}</h3>
+  <h3>Email: {{ user.email }}</h3>
+  <h3>Prtfolio Site: {{ user.userprofileinfo.portfolio_site }}</h3>
+  <p>Image:</p>
+  <img src="{{ user.userprofileinfo.profile_pic.url }}" alt="{{ user.username }}" height="200">
+
+{% endblock %}
