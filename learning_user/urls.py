@@ -29,3 +29,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# Copy from  https://docs.djangoproject.com/en/2.2/howto/static-files/
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
